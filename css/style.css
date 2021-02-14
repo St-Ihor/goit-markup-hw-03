@@ -1,0 +1,383 @@
+/* Структура:
+рут
+нормалайз
+общее
+хеадер
+мэйн на студии
+мэйн на портфолио
+футтер
+скрыть заголовки*/
+
+/* основной цвет текста  #757575 */
+/* вторичный цвет текста  #212121*/
+/* акцент + первая часть лого #2196F3 */
+/* вторая часть лого в хедере #000000 */
+/* белый + вторая часть лого в футтере #FFFFFF */
+/* контакты в футере rgba(255, 255, 255, .6) */
+/* бєкграунд в герое #2F303A */
+/* бєкгаунд "наша команда" + кнопки фильтра #F5F4FA */
+/* бэкгаунд #ffffff */
+/* границы #EEEEEE */
+:root {
+  --primery-text-color: #757575;
+  --secondary-text-color: #212121;
+  --accent-color: #2196f3;
+  --accent-secondary-color: #ffffff;
+  --logo-first-part: #2196f3;
+  --header-logo-second-part: #000000;
+  --background: #ffffff;
+  --background-hero: #2f303a;
+  --background-team: #f5f4fa;
+  --backgound-footer: #2f303a;
+  --footer-logo-second-part: #ffffff;
+  --footer-contscts: rgba(255, 255, 255, 0.6);
+  --background-filter: #f5f4fa;
+  --border: #eeeeee;
+}
+
+/* перенести потом в файл нормалайз.сиэсэс- начало */
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+address {
+  font-style: normal;
+}
+/* перенести потом в файл нормалайз.сиэсэс- конец */
+
+/* общее */
+body {
+  background-color: var(--background);
+  color: var(--primery-text-color);
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  outline: 2px solid tomato;
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* все про хедер */
+/* лого */
+.logo-header {
+  color: var(--header-logo-second-part);
+  font-family: Raleway, sans-serif;
+
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+
+.logo-part {
+  color: var(--logo-first-part);
+}
+
+/* навигация */
+.site-nav .link {
+  color: var(--secondary-text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--accent-color);
+}
+
+.site-nav .current {
+  color: var(--accent-color);
+}
+
+.site-nav.list {
+  display: flex;
+}
+
+/* контакты */
+.contacts .item {
+  color: var(--primery-text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+}
+
+.contacts .item:hover,
+.contacts .item:focus {
+  color: var(--accent-color);
+}
+
+.contacts.list {
+  display: flex;
+}
+
+/* мэйн на студии */
+/* герой */
+.hero {
+  text-align: center;
+  background-color: var(--background-hero);
+  padding: 200px 452px;
+}
+
+.hero .name {
+  margin-top: 0;
+  margin-bottom: 30px;
+  background-color: var(--background-hero);
+  color: var(--accent-secondary-color);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.hero .order {
+  display: inline-block;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  padding: 10px 32px;
+  min-width: 200px;
+
+  background-color: var(--accent-color);
+  color: var(--accent-secondary-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+
+/* ценности */
+.values,
+.team {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.values .list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.values .name {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: var(--secondary-text-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.values .essence {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-align: left;
+}
+
+/* чем мы занимаемся */
+.works {
+  padding-bottom: 94px;
+}
+
+.works .list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.works .title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  color: var(--secondary-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+/* наша команда */
+.team {
+  background-color: var(--background-team);
+}
+
+.team .list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.team .name {
+  margin-top: 0;
+  margin-bottom: 50px;
+  color: var(--secondary-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.team .title {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: var(--secondary-text-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.team .position {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+/* мэйн на портфолио */
+.portfolio {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+/* фильтр */
+.button.list {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.button .item {
+  display: inline-block;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  padding: 11px 22px;
+
+  background-color: var(--background-filter);
+  color: var(--secondary-text-color);
+  cursor: pointer;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.03em;
+}
+
+.button .item:hover,
+.button .item:focus {
+  background-color: var(--accent-color);
+  color: var(--accent-secondary-color);
+}
+
+/* продукция */
+.production.list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.production .item {
+  border: 1px solid var(--border);
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.production .name {
+  margin-top: 20px;
+  margin-bottom: 4px;
+  color: var(--secondary-text-color);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.production .category {
+  margin-top: 0;
+  margin-bottom: 0px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.03em;
+}
+
+/* все про футтер */
+.footer {
+  background-color: var(--backgound-footer);
+  padding: 60px;
+}
+/* лого */
+.logo-footer {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: var(--footer-logo-second-part);
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+
+.logo-part {
+  color: var(--logo-first-part);
+}
+
+/* адресс */
+.address {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+.address .office {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--footer-logo-second-part);
+}
+
+.address .item {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--footer-contscts);
+}
+
+/* скрыть заголовки, которых нет на макете */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
