@@ -33,6 +33,7 @@
   --footer-contscts: rgba(255, 255, 255, 0.6);
   --background-filter: #f5f4fa;
   --border: #eeeeee;
+  --line: #ececec;
 }
 
 /* перенести потом в файл нормалайз.сиэсэс- начало */
@@ -63,7 +64,7 @@ body {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  outline: 2px solid tomato;
+  /* outline: 2px solid tomato; */
 }
 
 .list {
@@ -73,8 +74,20 @@ body {
 }
 
 /* все про хедер */
+
+.container.header,
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+.container.header {
+  border-bottom: 1px solid var(--line);
+}
+
 /* лого */
 .logo-header {
+  margin-right: 93px;
+
   color: var(--header-logo-second-part);
   font-family: Raleway, sans-serif;
 
@@ -90,6 +103,9 @@ body {
 
 /* навигация */
 .site-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
   color: var(--secondary-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -111,6 +127,10 @@ body {
   display: flex;
 }
 
+.site-nav .nav-item + .nav-item {
+  margin-left: 50px;
+}
+
 /* контакты */
 .contacts .item {
   color: var(--primery-text-color);
@@ -128,14 +148,25 @@ body {
 
 .contacts.list {
   display: flex;
+  margin-left: auto;
+}
+
+.contacts-item + .contacts-item {
+  margin-left: 50px;
 }
 
 /* мэйн на студии */
 /* герой */
 .hero {
-  text-align: center;
   background-color: var(--background-hero);
-  padding: 200px 452px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.hero .container {
+  text-align: center;
+  padding-right: 252px;
+  padding-left: 252px;
 }
 
 .hero .name {
@@ -166,15 +197,21 @@ body {
 }
 
 /* ценности */
-.values,
-.team {
+.values {
   padding-top: 94px;
   padding-bottom: 94px;
 }
 
 .values .list {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.values .list-item {
+  width: 270px;
+}
+.values .list-item + .list-item {
+  margin-left: 30px;
 }
 
 .values .name {
@@ -223,11 +260,30 @@ body {
 /* наша команда */
 .team {
   background-color: var(--background-team);
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.team .box {
+  display: block;
 }
 
 .team .list {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  /* margin-left: -30px; */
+}
+.team .item {
+  flex-basis: calc(100% / 4 - 30px);
+  margin-left: 30px;
+  background-color: #fff;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.team .item:first-child {
+  margin-left: 0px;
 }
 
 .team .name {
@@ -296,20 +352,36 @@ body {
   color: var(--accent-secondary-color);
 }
 
+.button > .button-item + .button-item {
+  margin-left: 8px;
+}
+
 /* продукция */
 .production.list {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
 }
 .production .item {
-  border: 1px solid var(--border);
-  padding-bottom: 20px;
+  width: 370px;
   margin-bottom: 30px;
+  margin-right: 30px;
+}
+
+.production .item:nth-child(3n) {
+  margin-right: 0px;
+}
+
+.production .item:nth-last-child(-n + 3) {
+  margin-bottom: 0px;
+}
+
+.text {
+  padding: 20px 24px;
+  border: 1px solid var(--border);
+  border-top: none;
 }
 
 .production .name {
-  margin-top: 20px;
   margin-bottom: 4px;
   color: var(--secondary-text-color);
   font-weight: 700;
@@ -325,6 +397,10 @@ body {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
+}
+
+.production .box {
+  display: block;
 }
 
 /* все про футтер */
