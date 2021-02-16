@@ -75,12 +75,12 @@ body {
 
 /* все про хедер */
 
-.container.header,
+.header .container,
 .nav-links {
   display: flex;
   align-items: center;
 }
-.container.header {
+.header {
   border-bottom: 1px solid var(--line);
 }
 
@@ -334,7 +334,7 @@ body {
   display: inline-block;
   border: 1px solid transparent;
   border-radius: 3px;
-  padding: 11px 22px;
+  padding: 6px 22px;
 
   background-color: var(--background-filter);
   color: var(--secondary-text-color);
@@ -382,6 +382,7 @@ body {
 }
 
 .production .name {
+  margin-top: 0;
   margin-bottom: 4px;
   color: var(--secondary-text-color);
   font-weight: 700;
@@ -406,7 +407,8 @@ body {
 /* все про футтер */
 .footer {
   background-color: var(--backgound-footer);
-  padding: 60px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 /* лого */
 .logo-footer {
@@ -438,7 +440,7 @@ body {
 }
 
 .address .item {
-  margin-top: 0;
+  margin-top: 9px;
   margin-bottom: 0;
   color: var(--footer-contscts);
 }
